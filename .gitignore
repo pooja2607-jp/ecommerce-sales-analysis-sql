@@ -1,0 +1,3 @@
+# Raw dataset files (download from Kaggle instead — see README)
+data/
+*.csv
