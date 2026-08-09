@@ -8,7 +8,17 @@ This project uses SQL (MySQL) to answer real business questions a company might 
 
 ## Dataset
 
-The [Olist dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) contains real, anonymized order data from a Brazilian e-commerce marketplace between 2016–2018, split across multiple relational tables:
+> **Note:** The raw CSV files are not included in this repo (some exceed GitHub's 25MB upload limit). Download them directly from Kaggle to reproduce this analysis.
+
+**Source:** [Olist Brazilian E-Commerce Public Dataset on Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+
+**Steps to reproduce:**
+1. Download the dataset from the Kaggle link above (requires a free Kaggle account).
+2. Extract the CSV files into a local `data/` folder (not tracked in this repo — see `.gitignore`).
+3. Import each CSV into a MySQL database as its own table (table names match the CSV filenames, minus the `olist_` prefix and `_dataset` suffix, e.g. `olist_orders_dataset.csv` → `orders`).
+4. Run the queries in [`queries/analysis_queries.sql`](queries/analysis_queries.sql).
+
+The dataset contains real, anonymized order data from a Brazilian e-commerce marketplace between 2016–2018, split across multiple relational tables:
 
 | Table | Description |
 |---|---|
@@ -54,4 +64,4 @@ This project helped me practice writing multi-table JOINs to combine data spread
 
 ## Author
 
-J Pooja Akshitha / https://www.linkedin.com/in/pooja-akshitha-jallepalli/
+*J Pooja Akshitha/linkedin.com/in/pooja-akshitha-jallepalli/*
